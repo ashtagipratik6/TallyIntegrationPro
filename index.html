@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TallyIntegrationPro — Download</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Spectral:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #EEF2EA;
+    --paper-line: #C9D3C2;
+    --ink: #1E2A22;
+    --ink-soft: #4B5A4E;
+    --stamp: #A6402F;
+    --stamp-dark: #8A3126;
+    --gold: #AD8A5B;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background-color: var(--paper);
+    background-image: repeating-linear-gradient(
+      to bottom,
+      transparent,
+      transparent 43px,
+      var(--paper-line) 43px,
+      var(--paper-line) 44px
+    );
+    color: var(--ink);
+    font-family: 'IBM Plex Sans', sans-serif;
+    line-height: 1.55;
+    min-height: 100vh;
+  }
+
+  .wrap {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 88px 28px 64px;
+  }
+
+  .mark {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 10px;
+    margin-bottom: 64px;
+  }
+
+  .mark-glyph {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 13px;
+    color: var(--stamp);
+    border: 1px solid var(--stamp);
+    padding: 3px 7px;
+    letter-spacing: 0.02em;
+  }
+
+  .mark-name {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 14px;
+    color: var(--ink-soft);
+  }
+
+  h1 {
+    font-family: 'Spectral', serif;
+    font-weight: 500;
+    font-size: clamp(34px, 5.5vw, 50px);
+    line-height: 1.18;
+    max-width: 12ch;
+    color: var(--ink);
+  }
+
+  .lede {
+    margin-top: 22px;
+    font-size: 18px;
+    color: var(--ink-soft);
+    max-width: 46ch;
+  }
+
+  .cta-row {
+    margin-top: 44px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .download-btn {
+    position: relative;
+    display: inline-block;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    color: var(--paper);
+    background: var(--stamp);
+    border: none;
+    padding: 15px 26px;
+    text-decoration: none;
+    transform: rotate(-0.6deg);
+    box-shadow: 3px 3px 0 rgba(30, 42, 34, 0.15);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+
+  .download-btn:hover {
+    transform: rotate(-0.6deg) translateY(-2px);
+    box-shadow: 4px 5px 0 rgba(30, 42, 34, 0.18);
+    background: var(--stamp-dark);
+  }
+
+  .meta {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 13px;
+    color: var(--ink-soft);
+  }
+
+  .meta span { color: var(--gold); }
+
+  .rule {
+    margin: 64px 0 40px;
+    border: none;
+    border-top: 1px solid var(--paper-line);
+  }
+
+  .ledger {
+    display: grid;
+    gap: 26px;
+  }
+
+  .row {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 20px;
+    align-items: baseline;
+    padding-bottom: 22px;
+    border-bottom: 1px solid var(--paper-line);
+  }
+
+  .row:last-child { border-bottom: none; }
+
+  .row-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 13px;
+    color: var(--gold);
+  }
+
+  .row-body {
+    font-size: 16px;
+    color: var(--ink);
+  }
+
+  footer {
+    margin-top: 72px;
+    font-size: 14px;
+    color: var(--ink-soft);
+    max-width: 52ch;
+  }
+
+  footer a {
+    color: var(--stamp);
+  }
+
+  @media (max-width: 520px) {
+    .wrap { padding: 56px 20px 48px; }
+    .row { grid-template-columns: 1fr; gap: 6px; }
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+
+    <div class="mark">
+      <span class="mark-glyph">TIP</span>
+      <span class="mark-name">TallyIntegrationPro</span>
+    </div>
+
+    <h1>Keep Tally in sync, without lifting a finger.</h1>
+
+    <p class="lede">
+      TallyIntegrationPro connects your Tally data to the tools you already use.
+      It runs quietly in the background and updates itself the moment a new version ships.
+    </p>
+
+    <div class="cta-row">
+      <a class="download-btn" href="https://github.com/ashtagipratik6/TallyIntegrationPro/releases/latest/download/tallyintegrationpro.exe">
+        Download for Windows
+      </a>
+      <span class="meta">v1.1.1 <span>·</span> 71.6 MB <span>·</span> Windows 10/11</span>
+    </div>
+
+    <hr class="rule">
+
+    <div class="ledger">
+      <div class="row">
+        <div class="row-label">Setup</div>
+        <div class="row-body">Runs alongside your existing Tally installation — no manual exports or file juggling.</div>
+      </div>
+      <div class="row">
+        <div class="row-label">Updates</div>
+        <div class="row-body">Checks for new versions on launch and updates itself, so you're never stuck on an old build.</div>
+      </div>
+      <div class="row">
+        <div class="row-label">Data</div>
+        <div class="row-body">Your Tally data stays on your machine — nothing is uploaded anywhere by default.</div>
+      </div>
+    </div>
+
+    <footer>
+      Windows may show a SmartScreen warning since this build isn't code-signed yet.
+      Click <em>More info</em> → <em>Run anyway</em> to continue.
+      Questions? Reach out via the <a href="https://github.com/ashtagipratik6/TallyIntegrationPro">GitHub repository</a>.
+    </footer>
+
+  </div>
+</body>
+</html>
