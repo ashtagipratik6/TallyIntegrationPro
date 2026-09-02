@@ -416,7 +416,8 @@
     </section>
 
     <section id="security" class="py-16 bg-slate-900/40 border-t border-slate-800/80">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+        
         <div class="bg-slate-950 border border-slate-800 rounded-2xl p-6 sm:p-8 flex flex-col md:flex-row items-center gap-6">
           <div class="w-16 h-16 rounded-2xl bg-blue-500/10 border border-blue-500/20 text-blue-400 flex items-center justify-center shrink-0">
             <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -434,6 +435,78 @@
             </p>
           </div>
         </div>
+
+        <!-- Post-Update Antivirus Notice Card -->
+        <div class="bg-slate-950 border border-amber-500/30 rounded-2xl p-6 sm:p-8 space-y-6">
+          <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 pb-4 border-b border-slate-800">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/30 text-amber-400 flex items-center justify-center shrink-0">
+                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-lg font-bold text-slate-100">Post-Update Notice: "Failed to load Python DLL"</h3>
+                <p class="text-xs text-slate-400">Temporary lock caused by Antivirus scanning immediately after an auto-update</p>
+              </div>
+            </div>
+            <span class="text-[11px] font-mono bg-slate-900 text-amber-300 border border-amber-800/60 px-2.5 py-1 rounded-full self-start md:self-auto">Troubleshooting Tip</span>
+          </div>
+
+          <!-- Dialog Visual Mockup & Explanation Grid -->
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+            
+            <!-- Simulated Windows Error Popup Window -->
+            <div class="lg:col-span-6 bg-slate-900 border border-slate-700 rounded-xl overflow-hidden shadow-2xl">
+              <!-- Window Titlebar -->
+              <div class="bg-slate-800 px-3 py-1.5 flex items-center justify-between border-b border-slate-700">
+                <span class="text-xs font-sans text-slate-300 font-medium">Error</span>
+                <div class="w-3 h-3 text-slate-400 flex items-center justify-center text-[10px]">✕</div>
+              </div>
+              <!-- Window Body -->
+              <div class="p-4 bg-slate-900 space-y-4">
+                <div class="flex items-start gap-3">
+                  <div class="w-7 h-7 rounded-full bg-red-600 text-white flex items-center justify-center font-bold text-xs shrink-0 shadow-md">✕</div>
+                  <div class="text-xs font-mono text-slate-200 leading-relaxed">
+                    Failed to load Python DLL<br/>
+                    <span class="text-slate-400">'C:\Users\...\AppData\Local\Temp\_MEI...\python314.dll'.</span><br/>
+                    <span class="text-red-400 font-sans">LoadLibrary: The specified module could not be found.</span>
+                  </div>
+                </div>
+                <div class="flex justify-end pt-2">
+                  <div class="px-5 py-1 text-xs bg-slate-800 border border-slate-600 text-slate-100 rounded hover:bg-slate-700 cursor-pointer">OK</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Resolution Steps -->
+            <div class="lg:col-span-6 space-y-3">
+              <h4 class="text-sm font-semibold text-amber-300 flex items-center gap-2">
+                Why this happens &amp; how to solve:
+              </h4>
+              <p class="text-xs text-slate-300 leading-relaxed">
+                When the app updates, your antivirus / Windows Defender briefly locks and scans newly extracted files (<span class="font-mono text-brand-300">_MEIxxxx</span>) in your temp directory. This is standard behavior and not an application bug.
+              </p>
+              
+              <ol class="space-y-2 text-xs text-slate-300">
+                <li class="flex items-start gap-2.5">
+                  <span class="font-mono font-bold text-brand-400 bg-slate-900 border border-slate-800 rounded px-1.5 py-0.5 shrink-0">1</span>
+                  <span>Click <strong class="text-white">OK</strong> on the pop-up error dialog to close it.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <span class="font-mono font-bold text-brand-400 bg-slate-900 border border-slate-800 rounded px-1.5 py-0.5 shrink-0">2</span>
+                  <span>Wait a few seconds while your antivirus finishes marking the updated files as safe.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <span class="font-mono font-bold text-brand-400 bg-slate-900 border border-slate-800 rounded px-1.5 py-0.5 shrink-0">3</span>
+                  <span>Re-open <strong class="text-white">Tally Integration Pro</strong>. The application will launch updated and ready to use!</span>
+                </li>
+              </ol>
+            </div>
+
+          </div>
+        </div>
+
       </div>
     </section>
   </main>
